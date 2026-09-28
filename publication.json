@@ -1,13 +1,13 @@
 {
   "format": "doctapp-referentiels-cotation",
-  "publieLe": "2026-09-28T06:50:43.326593943Z",
+  "publieLe": "2026-09-28T06:56:28.782333937Z",
   "referentiels": [
     {
-      "version": "2026-09 · NGAP 01/09/2026 · CCAM V84 (à valider)",
+      "version": "2026-09 · NGAP 01/09/2026 · tarifs 01/01/2026 · CCAM V84 (à valider)",
       "miseAJour": "2026-09-28",
       "applicableDepuis": null,
-      "source": "Codes et conditions NGAP : NGAP en vigueur au 01/09/2026 (Assurance Maladie). Actes techniques : CCAM V84 (applicable au 31/07/2026), tarifs secteur 1 / OPTAM. Montants NGAP : valeurs de départ ou à renseigner d'après les tarifs publiés sur ameli.fr.",
-      "avertissement": "Référentiel non validé. Codes et conditions NGAP d'après la NGAP du 01/09/2026, tarifs CCAM d'après la CCAM V84 ; les montants NGAP sont à renseigner ou à vérifier (la NGAP ne fixe pas les montants). Chaque acte, ses conditions et les règles de cumul doivent être vérifiés par le médecin avant usage. Métropole, secteur 1.",
+      "source": "Codes et conditions : NGAP en vigueur au 01/09/2026. Montants NGAP : tarifs conventionnels métropole au 01/01/2026 (Assurance Maladie, « Facturation MG ou spécialiste en MG, janvier 2026 »), secteur 1 / OPTAM. Actes techniques : CCAM V84 (applicable au 31/07/2026).",
+      "avertissement": "Référentiel à valider par le médecin : codes et conditions d'après la NGAP du 01/09/2026, montants d'après les tarifs conventionnels au 01/01/2026 (métropole, secteur 1 / OPTAM), actes techniques d'après la CCAM V84. Chaque acte, ses conditions et les règles de cumul doivent être vérifiés avant usage ; le moteur propose, le médecin décide.",
       "actes": [
         {
           "code": "G",
@@ -59,7 +59,7 @@
           "code": "TCG",
           "libelle": "Téléconsultation de médecine générale",
           "type": "base",
-          "tarif": null,
+          "tarif": 25.0,
           "conditions": {
             "lieux": [
               "teleconsultation"
@@ -74,7 +74,7 @@
           },
           "motsCles": [],
           "groupe": null,
-          "note": "Téléconsultation (NGAP art. 14.9.3) : ne se cumule ni avec F, MN, MM ni avec MCS. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Téléconsultation (NGAP art. 14.9.3) : ne se cumule ni avec F, MN, MM ni avec MCS.",
           "aVerifier": true,
           "local": false
         },
@@ -144,7 +144,7 @@
           },
           "motsCles": [],
           "groupe": "horaire",
-          "note": "Urgence mettant en jeu la vie ou l'intégrité du patient (NGAP art. 14) ; appel entre 19 h et 7 h pour la nuit. En visite : MDN / MDD ; non facturable en téléconsultation.",
+          "note": "Urgence mettant en jeu la vie ou l'intégrité du patient (NGAP art. 14) ; appel entre 19 h et 7 h pour la nuit. En visite : MDN / MDD ; non facturable en téléconsultation. Pour le généraliste de garde au cabinet, F s'applique dès le samedi midi.",
           "aVerifier": true,
           "local": false
         },
@@ -201,9 +201,9 @@
         },
         {
           "code": "MDN",
-          "libelle": "Majoration de déplacement de nuit (visite, urgence)",
+          "libelle": "Majoration de déplacement de nuit 20 h – minuit et 6 h – 8 h (visite, urgence)",
           "type": "majoration",
-          "tarif": null,
+          "tarif": 45.0,
           "conditions": {
             "lieux": [
               "domicile"
@@ -213,7 +213,7 @@
             "dimancheFerie": null,
             "plagesHoraires": [
               "20:00-24:00",
-              "00:00-08:00"
+              "06:00-08:00"
             ],
             "urgence": true,
             "medecinTraitant": null,
@@ -221,7 +221,7 @@
           },
           "motsCles": [],
           "groupe": "horaire",
-          "note": "NGAP art. 14.2 : remplace MD la nuit ; peut être différenciée selon l'heure. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "NGAP art. 14.2 : remplace MD la nuit (0 h – 6 h : MDI).",
           "aVerifier": true,
           "local": false
         },
@@ -229,7 +229,7 @@
           "code": "MDD",
           "libelle": "Majoration de déplacement dimanche et jour férié (visite, urgence)",
           "type": "majoration",
-          "tarif": null,
+          "tarif": 29.1,
           "conditions": {
             "lieux": [
               "domicile"
@@ -244,7 +244,7 @@
           },
           "motsCles": [],
           "groupe": "horaire",
-          "note": "NGAP art. 14.2 : remplace MD le dimanche et les jours fériés. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "NGAP art. 14.2 : remplace MD le dimanche et les jours fériés.",
           "aVerifier": true,
           "local": false
         },
@@ -252,7 +252,7 @@
           "code": "MU",
           "libelle": "Majoration d'urgence (le médecin quitte son cabinet)",
           "type": "majoration",
-          "tarif": null,
+          "tarif": 22.6,
           "conditions": {
             "lieux": [
               "domicile"
@@ -272,7 +272,7 @@
             "quitter le cabinet"
           ],
           "groupe": "horaire",
-          "note": "NGAP art. 14.1 : à la demande du Centre 15 ou du patient ; pas de cumul avec les majorations de nuit ou du dimanche. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "NGAP art. 14.1 : à la demande du Centre 15 ou du patient ; pas de cumul avec les majorations de nuit ou du dimanche.",
           "aVerifier": true,
           "local": false
         },
@@ -280,7 +280,7 @@
           "code": "MOP",
           "libelle": "Majoration personnes âgées (médecin non traitant)",
           "type": "majoration",
-          "tarif": null,
+          "tarif": 5.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": 960,
@@ -293,7 +293,7 @@
           },
           "motsCles": [],
           "groupe": null,
-          "note": "NGAP art. 15.2.5 : patient de plus de 80 ans dont vous n'êtes pas le médecin traitant ; secteur 1 / OPTAM. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "NGAP art. 15.2.5 : patient de plus de 80 ans (80 ans ou plus retenu) dont vous n'êtes pas le médecin traitant ; secteur 1 / OPTAM.",
           "aVerifier": true,
           "local": false
         },
@@ -301,7 +301,7 @@
           "code": "MCG",
           "libelle": "Majoration de coordination du généraliste correspondant",
           "type": "majoration",
-          "tarif": null,
+          "tarif": 5.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -318,7 +318,7 @@
             "demande du medecin traitant"
           ],
           "groupe": null,
-          "note": "NGAP art. 2 bis : consultation à la demande du médecin traitant, avec retour d'information ; pas avec un dépassement. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "NGAP art. 2 bis : consultation à la demande du médecin traitant, avec retour d'information ; pas avec un dépassement.",
           "aVerifier": true,
           "local": false
         },
@@ -326,7 +326,7 @@
           "code": "MSH",
           "libelle": "Majoration de sortie d'hospitalisation (patient à forte comorbidité)",
           "type": "majoration",
-          "tarif": null,
+          "tarif": 23.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -343,7 +343,7 @@
             "sortie d'hopital"
           ],
           "groupe": null,
-          "note": "NGAP art. 15.5 : dans les 30 jours, patient polypathologique ; une seule MSH, MIC ou GL1 par séjour ; tarif opposable. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "NGAP art. 15.5 : dans les 30 jours, patient polypathologique ; une seule MSH, MIC ou GL1 par séjour ; tarif opposable.",
           "aVerifier": true,
           "local": false
         },
@@ -351,7 +351,7 @@
           "code": "MIC",
           "libelle": "Majoration insuffisance cardiaque après hospitalisation",
           "type": "majoration",
-          "tarif": null,
+          "tarif": 23.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -367,7 +367,7 @@
             "insuffisance cardiaque decompensee"
           ],
           "groupe": null,
-          "note": "NGAP art. 15.5 : avant la fin du 2e mois après l'hospitalisation ; une seule MSH, MIC ou GL1 par séjour. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "NGAP art. 15.5 : avant la fin du 2e mois après l'hospitalisation ; une seule MSH, MIC ou GL1 par séjour.",
           "aVerifier": true,
           "local": false
         },
@@ -375,7 +375,7 @@
           "code": "SNP",
           "libelle": "Majoration soins non programmés (régulation SAS)",
           "type": "majoration",
-          "tarif": null,
+          "tarif": 15.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -392,7 +392,7 @@
             "regulation sas"
           ],
           "groupe": null,
-          "note": "NGAP art. 14.1.3 : patient adressé par le régulateur du SAS, vu sous 48 h ; 20 par semaine au plus ; pas pour vos patients médecin traitant. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "NGAP art. 14.1.3 : patient adressé par le régulateur du SAS, vu sous 48 h ; 20 par semaine au plus ; pas pour vos patients médecin traitant.",
           "aVerifier": true,
           "local": false
         },
@@ -400,7 +400,7 @@
           "code": "MRT",
           "libelle": "Majoration médecin traitant sur demande de la régulation (Centre 15)",
           "type": "majoration",
-          "tarif": null,
+          "tarif": 15.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -417,7 +417,426 @@
             "regulation du 15"
           ],
           "groupe": null,
-          "note": "NGAP art. 22-2 : patient vu sous 48 h aux horaires habituels ; pas de cumul avec SNP, PDSA, F/MN/MM. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "NGAP art. 22-2 : patient vu sous 48 h aux horaires habituels ; pas de cumul avec SNP, PDSA, F/MN/MM.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MDI",
+          "libelle": "Majoration de déplacement de nuit minuit – 6 h (visite, urgence)",
+          "type": "majoration",
+          "tarif": 50.0,
+          "conditions": {
+            "lieux": [
+              "domicile"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": [
+              "00:00-06:00"
+            ],
+            "urgence": true,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [],
+          "groupe": "horaire",
+          "note": "NGAP art. 14.2 : remplace MD de minuit à 6 h.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MDM",
+          "libelle": "Majoration de déplacement en zone de montagne",
+          "type": "majoration",
+          "tarif": 15.0,
+          "conditions": {
+            "lieux": [
+              "domicile"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "zone de montagne",
+            "en montagne"
+          ],
+          "groupe": "horaire",
+          "note": "NGAP art. 14.2 : cabinet ou domicile du patient en zone montagne ; remplace MD.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MUT",
+          "libelle": "Majoration médecin traitant : adressage à un correspondant sous 4 jours ouvrés",
+          "type": "majoration",
+          "tarif": 5.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": true,
+            "ald": null
+          },
+          "motsCles": [
+            "adresse en urgence",
+            "rendez-vous sous 4 jours",
+            "avis specialise urgent"
+          ],
+          "groupe": null,
+          "note": "NGAP art. 14.1.6 : tarif opposable ; pas de cumul avec les majorations de PDSA.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MCU",
+          "libelle": "Majoration du correspondant sollicité par le médecin traitant sous 4 jours ouvrés",
+          "type": "majoration",
+          "tarif": 15.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": false,
+            "ald": null
+          },
+          "motsCles": [
+            "demande urgente du medecin traitant",
+            "sous 4 jours a la demande"
+          ],
+          "groupe": null,
+          "note": "NGAP art. 14.1.6 : tarif opposable.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "SHE",
+          "libelle": "Majoration 19 h – 21 h sur demande de la régulation (en plus de SNP ou MRT)",
+          "type": "majoration",
+          "tarif": 5.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": [
+              "19:00-21:00"
+            ],
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "regulation sas",
+            "adresse par le sas",
+            "demande de la regulation",
+            "appel de la regulation",
+            "regulation du 15"
+          ],
+          "groupe": null,
+          "note": "NGAP art. 14.1.3 et 22-2 : seulement avec SNP ou MRT.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MVR",
+          "libelle": "Majoration de visite dans les 24 h suivant l'appel de la régulation du SAS",
+          "type": "majoration",
+          "tarif": 10.0,
+          "conditions": {
+            "lieux": [
+              "domicile"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "regulation sas",
+            "adresse par le sas"
+          ],
+          "groupe": null,
+          "note": "NGAP art. 14.1.5 : visite à tarif opposable ; cumulable avec SNP et SHE.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MHP",
+          "libelle": "Majoration hors urgence aux horaires de permanence des soins (non régulé)",
+          "type": "majoration",
+          "tarif": 5.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": false,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "horaires de permanence des soins",
+            "horaires de pdsa"
+          ],
+          "groupe": null,
+          "note": "NGAP art. 22-4 : tarif opposable ; pas de cumul avec F, MN, MM, MDN, MDD ni les majorations PDSA régulées.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "CRN",
+          "libelle": "Permanence des soins régulée : nuit 20 h – minuit / 6 h – 8 h, au cabinet",
+          "type": "majoration",
+          "tarif": 42.5,
+          "conditions": {
+            "lieux": [
+              "cabinet"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": [
+              "20:00-24:00",
+              "06:00-08:00"
+            ],
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "permanence des soins",
+            "garde regulee"
+          ],
+          "groupe": "pdsa",
+          "note": "NGAP art. 22-3 : médecin inscrit au tableau de garde, à la demande de la régulation ; pas de cumul avec F, MN, MM, MD, SNP.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "CRM",
+          "libelle": "Permanence des soins régulée : milieu de nuit minuit – 6 h, au cabinet",
+          "type": "majoration",
+          "tarif": 51.5,
+          "conditions": {
+            "lieux": [
+              "cabinet"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": [
+              "00:00-06:00"
+            ],
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "permanence des soins",
+            "garde regulee"
+          ],
+          "groupe": "pdsa",
+          "note": "NGAP art. 22-3.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "CRD",
+          "libelle": "Permanence des soins régulée : dimanche et jour férié, au cabinet",
+          "type": "majoration",
+          "tarif": 26.5,
+          "conditions": {
+            "lieux": [
+              "cabinet"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": true,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "permanence des soins",
+            "garde regulee"
+          ],
+          "groupe": "pdsa",
+          "note": "NGAP art. 22-3.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "VRN",
+          "libelle": "Permanence des soins régulée : nuit 20 h – minuit / 6 h – 8 h, en visite",
+          "type": "majoration",
+          "tarif": 52.5,
+          "conditions": {
+            "lieux": [
+              "domicile"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": [
+              "20:00-24:00",
+              "06:00-08:00"
+            ],
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "permanence des soins",
+            "garde regulee"
+          ],
+          "groupe": "pdsa",
+          "note": "NGAP art. 22-3 : pas de cumul avec MD, MDN, MDD.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "VRM",
+          "libelle": "Permanence des soins régulée : milieu de nuit minuit – 6 h, en visite",
+          "type": "majoration",
+          "tarif": 66.0,
+          "conditions": {
+            "lieux": [
+              "domicile"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": [
+              "00:00-06:00"
+            ],
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "permanence des soins",
+            "garde regulee"
+          ],
+          "groupe": "pdsa",
+          "note": "NGAP art. 22-3.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "VRD",
+          "libelle": "Permanence des soins régulée : dimanche et jour férié, en visite",
+          "type": "majoration",
+          "tarif": 36.5,
+          "conditions": {
+            "lieux": [
+              "domicile"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": true,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "permanence des soins",
+            "garde regulee"
+          ],
+          "groupe": "pdsa",
+          "note": "NGAP art. 22-3.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "VRS",
+          "libelle": "Permanence des soins régulée : samedi, pont (lundi veille / vendredi lendemain de férié), en visite",
+          "type": "majoration",
+          "tarif": 36.5,
+          "conditions": {
+            "lieux": [
+              "domicile"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "garde du samedi",
+            "permanence des soins du samedi"
+          ],
+          "groupe": "pdsa",
+          "note": "NGAP art. 22-3 : samedi, lundi veille de jour férié, vendredi lendemain de jour férié.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MIS",
+          "libelle": "Majoration d'information initiale et de stratégie thérapeutique (pathologie grave)",
+          "type": "majoration",
+          "tarif": 30.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "consultation d'annonce",
+            "annonce du diagnostic"
+          ],
+          "groupe": null,
+          "note": "Après l'annonce d'un cancer, d'une pathologie neurologique grave ou neurodégénérative, d'un TND ; une fois par patient ; code FSP : MTX ; non facturable en secteur 2 non OPTAM.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "PIV",
+          "libelle": "Majoration de prise en charge initiale d'une infection par le VIH",
+          "type": "majoration",
+          "tarif": 30.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "vih",
+            "infection a vih"
+          ],
+          "groupe": null,
+          "note": "Une fois par patient, à l'initiation de la prise en charge ; code FSP : MTX ; non facturable en secteur 2 non OPTAM.",
           "aVerifier": true,
           "local": false
         },
@@ -425,7 +844,7 @@
           "code": "COE",
           "libelle": "Consultation obligatoire de l'enfant (8 jours, 9e mois, 24e mois)",
           "type": "specifique",
-          "tarif": null,
+          "tarif": 60.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -444,7 +863,7 @@
             "examen du 24e mois"
           ],
           "groupe": null,
-          "note": "Remplace la consultation de base. NGAP art. 14.9 : tarif opposable ; pas de cumul avec MEG. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Remplace la consultation de base. NGAP art. 14.9 : dans les 8 jours, au cours du 9e ou 10e mois, du 24e ou 25e mois ; tarif opposable ; pas de cumul avec MEG.",
           "aVerifier": true,
           "local": false
         },
@@ -452,7 +871,7 @@
           "code": "COD",
           "libelle": "Examen obligatoire de l'enfant de moins de 6 ans",
           "type": "specifique",
-          "tarif": null,
+          "tarif": 35.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -468,19 +887,19 @@
             "bilan obligatoire"
           ],
           "groupe": null,
-          "note": "Remplace la consultation de base. NGAP art. 14.9 : secteur 1 / OPTAM ; pas de cumul avec MEG. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Remplace la consultation de base. NGAP art. 14.9 : secteur 1 / OPTAM ; pas de cumul avec MEG.",
           "aVerifier": true,
           "local": false
         },
         {
           "code": "COB",
-          "libelle": "Examen obligatoire de l'enfant de 6 ans et plus",
+          "libelle": "Examen obligatoire de l'enfant de 6 à 18 ans",
           "type": "specifique",
-          "tarif": null,
+          "tarif": 30.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": 72,
-            "ageMaxMois": 203,
+            "ageMaxMois": 215,
             "dimancheFerie": null,
             "plagesHoraires": null,
             "urgence": null,
@@ -492,7 +911,7 @@
             "bilan obligatoire"
           ],
           "groupe": null,
-          "note": "Remplace la consultation de base. NGAP art. 14.9 : secteur 1 / OPTAM. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Remplace la consultation de base. NGAP art. 14.9 : secteur 1 / OPTAM.",
           "aVerifier": true,
           "local": false
         },
@@ -500,7 +919,7 @@
           "code": "CCP",
           "libelle": "Première consultation de contraception et de prévention (moins de 26 ans)",
           "type": "specifique",
-          "tarif": null,
+          "tarif": 47.5,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -517,15 +936,15 @@
             "sante sexuelle"
           ],
           "groupe": null,
-          "note": "Remplace la consultation de base. NGAP art. 14.8 : une seule fois par patient, tarif opposable, anonymat possible. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Remplace la consultation de base. NGAP art. 14.8 : une seule fois par patient, tarif opposable, anonymat possible. Code FSP : CCX.",
           "aVerifier": true,
           "local": false
         },
         {
           "code": "GL1",
-          "libelle": "Consultation longue de sortie d'hospitalisation (plus de 80 ans)",
+          "libelle": "Consultation longue de sortie d'hospitalisation (80 ans ou plus)",
           "type": "specifique",
-          "tarif": null,
+          "tarif": 60.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": 960,
@@ -542,15 +961,15 @@
             "sortie d'hopital"
           ],
           "groupe": null,
-          "note": "Remplace la consultation de base. NGAP art. 15.2 : dans les 45 jours, une fois par an ; une seule GL1, MIC ou MSH par séjour. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Remplace la consultation de base. NGAP art. 15.2 : dans les 45 jours, une fois par an ; une seule GL1, MIC ou MSH par séjour.",
           "aVerifier": true,
           "local": false
         },
         {
           "code": "GL2",
-          "libelle": "Consultation longue de déprescription (plus de 80 ans, 10 lignes ou plus)",
+          "libelle": "Consultation longue de déprescription (80 ans ou plus, 10 lignes ou plus)",
           "type": "specifique",
-          "tarif": null,
+          "tarif": 60.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": 960,
@@ -566,15 +985,15 @@
             "bilan de medication"
           ],
           "groupe": null,
-          "note": "Remplace la consultation de base. NGAP art. 15.2 : après un bilan de médication en pharmacie ; une fois par an. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Remplace la consultation de base. NGAP art. 15.2 : après un bilan de médication en pharmacie ; une fois par an.",
           "aVerifier": true,
           "local": false
         },
         {
           "code": "GL3",
-          "libelle": "Consultation longue d'orientation médico-sociale (dossier APA, plus de 80 ans)",
+          "libelle": "Consultation longue d'orientation médico-sociale (dossier APA, 80 ans ou plus)",
           "type": "specifique",
-          "tarif": null,
+          "tarif": 60.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": 960,
@@ -590,7 +1009,7 @@
             "allocation personnalisee d'autonomie"
           ],
           "groupe": null,
-          "note": "Remplace la consultation de base. NGAP art. 15.2 : une fois par an ; GL3 ou MPH. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Remplace la consultation de base. NGAP art. 15.2 : une fois par an ; GL3 ou MPH.",
           "aVerifier": true,
           "local": false
         },
@@ -598,7 +1017,7 @@
           "code": "IMT",
           "libelle": "Consultation d'inscription comme médecin traitant (patient en ALD)",
           "type": "specifique",
-          "tarif": null,
+          "tarif": 60.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -615,7 +1034,7 @@
             "inscription medecin traitant"
           ],
           "groupe": null,
-          "note": "Remplace la consultation de base. NGAP art. 18.2 : une seule fois par patient, tarif opposable ; ni MEG ni majoration de coordination. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Remplace la consultation de base. NGAP art. 18.2 : une seule fois par patient, tarif opposable ; ni MEG ni majoration de coordination.",
           "aVerifier": true,
           "local": false
         },
@@ -623,7 +1042,7 @@
           "code": "VL",
           "libelle": "Visite longue très complexe à domicile",
           "type": "specifique",
-          "tarif": null,
+          "tarif": 60.0,
           "conditions": {
             "lieux": [
               "domicile"
@@ -643,7 +1062,7 @@
             "parkinson"
           ],
           "groupe": null,
-          "note": "Remplace la consultation de base. NGAP art. 15.2.3 : maladie neurodégénérative en ALD, 80 ans et plus en ALD, ou première visite de déclaration ; 4 par an au plus ; ni MEG ni majoration de coordination. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Remplace la consultation de base. NGAP art. 15.2.3 : maladie neurodégénérative en ALD, 80 ans et plus en ALD, ou première visite de déclaration ; 4 par an au plus ; ni MEG ni majoration de coordination.",
           "aVerifier": true,
           "local": false
         },
@@ -651,7 +1070,7 @@
           "code": "VSP",
           "libelle": "Visite longue de soins palliatifs à domicile",
           "type": "specifique",
-          "tarif": null,
+          "tarif": 60.0,
           "conditions": {
             "lieux": [
               "domicile"
@@ -668,7 +1087,182 @@
             "soins palliatifs"
           ],
           "groupe": null,
-          "note": "Remplace la consultation de base. NGAP art. 15.2.3 : patient en soins palliatifs, par le médecin traitant. Montant à renseigner (tarifs des médecins généralistes sur ameli.fr).",
+          "note": "Remplace la consultation de base. NGAP art. 15.2.3 : patient en soins palliatifs, par le médecin traitant.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "CSO",
+          "libelle": "Consultation de suivi de l'enfant en risque avéré d'obésité (3 à 12 ans)",
+          "type": "specifique",
+          "tarif": 47.5,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": 36,
+            "ageMaxMois": 155,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": true,
+            "ald": null
+          },
+          "motsCles": [
+            "risque d'obesite",
+            "suivi de l'obesite",
+            "surpoids de l'enfant"
+          ],
+          "groupe": null,
+          "note": "Remplace la consultation de base. NGAP art. 15.8 : médecin traitant, 2 fois par an au plus ; code FSP : CCX.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "CSE",
+          "libelle": "Consultation annuelle de suivi de l'enfant autiste",
+          "type": "specifique",
+          "tarif": 47.5,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": 215,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "autisme",
+            "trouble du spectre de l'autisme",
+            "tsa"
+          ],
+          "groupe": null,
+          "note": "Remplace la consultation de base. NGAP art. 15.8 : une fois par an ; code FSP : CCE.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "ASE",
+          "libelle": "Consultation à l'entrée du mineur dans la protection de l'enfance",
+          "type": "specifique",
+          "tarif": 47.5,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": 215,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "aide sociale a l'enfance",
+            "protection de l'enfance"
+          ],
+          "groupe": null,
+          "note": "Remplace la consultation de base. NGAP art. 15.8 : bilan de santé et de prévention obligatoire ; une fois ; code FSP : CCX.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "CTE",
+          "libelle": "Consultation de repérage d'un trouble du neurodéveloppement ou de la relation parents-enfant",
+          "type": "specifique",
+          "tarif": 60.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": 215,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "trouble du neurodeveloppement",
+            "tnd",
+            "trouble de la relation precoce"
+          ],
+          "groupe": null,
+          "note": "Remplace la consultation de base. NGAP art. 15.9 : formation spécifique requise ; une fois par patient ; code FSP : CCE.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MPH",
+          "libelle": "Consultation très complexe : handicap ou perte d'autonomie (APA hors GL3, MDPH, changement de médecin traitant)",
+          "type": "specifique",
+          "tarif": 60.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "certificat mdph",
+            "dossier mdph",
+            "dossier apa",
+            "allocation personnalisee d'autonomie"
+          ],
+          "groupe": null,
+          "note": "Remplace la consultation de base. NGAP art. 15.9 : premier certificat MDPH complet, dossier APA (patient de moins de 80 ans ou dont vous n'êtes pas le médecin traitant ; sinon GL3), passage de dossier handicap sévère ; code FSP : CCE.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "RDV",
+          "libelle": "Rendez-vous prévention (âges clés)",
+          "type": "specifique",
+          "tarif": 30.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": 216,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "rendez-vous prevention",
+            "rdv prevention",
+            "bilan prevention"
+          ],
+          "groupe": null,
+          "note": "Remplace la consultation de base. Tarif fixé par arrêté : 18-25, 45-50, 60-65 et 70-75 ans.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "EPG",
+          "libelle": "Examen médical du futur coparent",
+          "type": "specifique",
+          "tarif": 30.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "futur coparent",
+            "futur co-parent",
+            "futur pere"
+          ],
+          "groupe": null,
+          "note": "Remplace la consultation de base. Article L. 2122-3 du code de la santé publique.",
           "aVerifier": true,
           "local": false
         },
