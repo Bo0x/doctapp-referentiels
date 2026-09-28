@@ -1,13 +1,13 @@
 {
   "format": "doctapp-referentiels-cotation",
-  "publieLe": "2026-09-28T06:18:08.640041719Z",
+  "publieLe": "2026-09-28T06:38:27.350192677Z",
   "referentiels": [
     {
-      "version": "2026-09 (à valider)",
-      "miseAJour": "2026-09-27",
+      "version": "2026-09 · CCAM V84 (à valider)",
+      "miseAJour": "2026-09-28",
       "applicableDepuis": null,
-      "source": null,
-      "avertissement": "Référentiel de départ, non validé. Chaque tarif et chaque condition doivent être vérifiés par le médecin (sources : ameli.fr, NGAP et CCAM en vigueur) avant usage. Métropole, secteur 1.",
+      "source": "Actes techniques : CCAM V84 de l'Assurance Maladie (applicable au 31/07/2026), tarifs secteur 1 / OPTAM. NGAP : valeurs de départ, à vérifier sur ameli.fr.",
+      "avertissement": "Référentiel non validé. Les tarifs CCAM proviennent du fichier officiel V84 (secteur 1 / OPTAM) ; les tarifs NGAP sont des valeurs de départ. Chaque acte, ses conditions et les règles de cumul doivent être vérifiés par le médecin avant usage. Métropole, secteur 1.",
       "actes": [
         {
           "code": "G",
@@ -197,7 +197,7 @@
           "code": "DEQP003",
           "libelle": "Électrocardiographie sur au moins 12 dérivations",
           "type": "technique",
-          "tarif": 14.26,
+          "tarif": 14.77,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -219,9 +219,9 @@
         },
         {
           "code": "JKHD001",
-          "libelle": "Prélèvement cervicovaginal (frottis)",
+          "libelle": "Prélèvement cervicovaginal",
           "type": "technique",
-          "tarif": null,
+          "tarif": 13.0,
           "conditions": {
             "lieux": null,
             "ageMinMois": null,
@@ -237,7 +237,616 @@
             "prelevement cervico"
           ],
           "groupe": null,
-          "note": "Code et tarif à vérifier.",
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "JKLD001",
+          "libelle": "Pose d'un dispositif intra-utérin",
+          "type": "technique",
+          "tarif": 38.4,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "pose de sterilet",
+            "pose de diu",
+            "pose sterilet",
+            "pose diu"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "JKKD001",
+          "libelle": "Changement d'un dispositif intra-utérin",
+          "type": "technique",
+          "tarif": 38.4,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "changement de sterilet",
+            "changement de diu"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QZLA004",
+          "libelle": "Pose d'implant pharmacologique souscutané",
+          "type": "technique",
+          "tarif": 18.77,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "pose d'implant",
+            "pose implant",
+            "nexplanon"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QZGA002",
+          "libelle": "Ablation ou changement d'implant pharmacologique souscutané",
+          "type": "technique",
+          "tarif": 41.8,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "retrait d'implant",
+            "ablation d'implant",
+            "retrait implant",
+            "changement d'implant"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QZJA002",
+          "libelle": "Parage et/ou suture de plaie superficielle de la peau de moins de 3 cm de grand axe, en dehors de la face",
+          "type": "technique",
+          "tarif": 26.6,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "suture",
+            "points de suture",
+            "parage"
+          ],
+          "groupe": null,
+          "note": "Plaie de moins de 3 cm, hors visage.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QZJA017",
+          "libelle": "Parage et/ou suture de plaie superficielle de la peau de 3 cm à 10 cm de grand axe, en dehors de la face",
+          "type": "technique",
+          "tarif": 53.95,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "suture de 3",
+            "plaie de 3 a 10"
+          ],
+          "groupe": null,
+          "note": "Plaie de 3 à 10 cm, hors visage.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QAJA013",
+          "libelle": "Parage et/ou suture de plaie superficielle de la peau de la face de moins de 3 cm de grand axe",
+          "type": "technique",
+          "tarif": 31.35,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "suture visage",
+            "suture du visage",
+            "plaie du visage"
+          ],
+          "groupe": null,
+          "note": "Plaie du visage de moins de 3 cm.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "CAGD001",
+          "libelle": "Ablation unilatérale ou bilatérale de bouchon de cérumen ou de corps étranger du méat acoustique externe",
+          "type": "technique",
+          "tarif": 20.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "cerumen",
+            "bouchon de cerumen"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "GAGD002",
+          "libelle": "Ablation de corps étranger de la cavité nasale",
+          "type": "technique",
+          "tarif": 36.8,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "corps etranger nasal",
+            "corps etranger du nez"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "BDGP002",
+          "libelle": "Ablation d'un corps étranger superficiel de la cornée",
+          "type": "technique",
+          "tarif": 20.9,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "corps etranger corneen",
+            "corps etranger de la cornee"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "GLQP012",
+          "libelle": "Mesure de la capacité vitale lente et de l'expiration forcée, avec enregistrement [Spirométrie standard]",
+          "type": "technique",
+          "tarif": 41.87,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "spirometrie",
+            "efr"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MZLB001",
+          "libelle": "Injection thérapeutique d'agent pharmacologique dans une articulation ou une bourse séreuse du membre supérieur, par voie transcutanée sans guidage",
+          "type": "technique",
+          "tarif": 27.3,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "infiltration epaule",
+            "infiltration de l'epaule",
+            "infiltration du coude",
+            "infiltration poignet"
+          ],
+          "groupe": null,
+          "note": "Membre supérieur, sans guidage.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "NZLB001",
+          "libelle": "Injection thérapeutique d'agent pharmacologique dans une articulation ou une bourse séreuse du membre inférieur, par voie transcutanée sans guidage",
+          "type": "technique",
+          "tarif": 32.2,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "infiltration genou",
+            "infiltration du genou",
+            "infiltration cheville"
+          ],
+          "groupe": null,
+          "note": "Membre inférieur, sans guidage.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MZHB002",
+          "libelle": "Ponction ou cytoponction d'une articulation du membre supérieur, par voie transcutanée sans guidage",
+          "type": "technique",
+          "tarif": 30.1,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "ponction du coude",
+            "ponction epaule",
+            "ponction de l'epaule"
+          ],
+          "groupe": null,
+          "note": "Membre supérieur, sans guidage.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "NZHB002",
+          "libelle": "Ponction ou cytoponction d'une articulation du membre inférieur, par voie transcutanée sans guidage",
+          "type": "technique",
+          "tarif": 30.1,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "ponction genou",
+            "ponction du genou",
+            "ponction de genou"
+          ],
+          "groupe": null,
+          "note": "Membre inférieur, sans guidage.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QZFA036",
+          "libelle": "Exérèse de lésion superficielle de la peau par excision d'une zone cutanée de moins de 5 cm²",
+          "type": "technique",
+          "tarif": 28.8,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "exerese",
+            "excision cutanee"
+          ],
+          "groupe": null,
+          "note": "Une zone de moins de 5 cm².",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QZNP022",
+          "libelle": "Destruction d'une lésion cutanée, par cryode de contact [cryochirurgie]",
+          "type": "technique",
+          "tarif": 41.55,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "cryotherapie",
+            "azote liquide"
+          ],
+          "groupe": null,
+          "note": "Une lésion ; plusieurs lésions : QZNP014.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QZNP014",
+          "libelle": "Destruction de plusieurs lésions cutanées, par cryode de contact [cryochirurgie]",
+          "type": "technique",
+          "tarif": 60.1,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "cryotherapie de plusieurs",
+            "plusieurs lesions a l'azote"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QZJB001",
+          "libelle": "Évacuation d'un hématome infra-unguéal, par voie transunguéale",
+          "type": "technique",
+          "tarif": 11.82,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "hematome sous-ungueal",
+            "hematome sous ungueal"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MJPA010",
+          "libelle": "Incision ou excision d'un panaris superficiel",
+          "type": "technique",
+          "tarif": 39.91,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "panaris"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QZFA020",
+          "libelle": "Exérèse partielle ou totale de la tablette d'un ongle",
+          "type": "technique",
+          "tarif": 48.77,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "ongle incarne",
+            "exerese de l'ongle",
+            "avulsion"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "JDJD001",
+          "libelle": "Évacuation de la vessie par cathétérisme transitoire [Sondage vésical évacuateur]",
+          "type": "technique",
+          "tarif": 22.91,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "sondage evacuateur",
+            "globe vesical"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "CBQD001",
+          "libelle": "Tympanométrie",
+          "type": "technique",
+          "tarif": 23.2,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "tympanometrie"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "CDQP010",
+          "libelle": "Audiométrie tonale ou vocale",
+          "type": "technique",
+          "tarif": 27.2,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "audiometrie"
+          ],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "QZQP001",
+          "libelle": "Dermatoscopie [dermoscopie] pour surveillance de lésion à haut risque",
+          "type": "technique",
+          "tarif": 54.1,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "dermatoscopie"
+          ],
+          "groupe": null,
+          "note": "Surveillance de lésion à haut risque uniquement (conditions de la CCAM).",
           "aVerifier": true,
           "local": false
         }
