@@ -1,0 +1,257 @@
+{
+  "format": "doctapp-referentiels-cotation",
+  "publieLe": "2026-09-28T06:18:08.640041719Z",
+  "referentiels": [
+    {
+      "version": "2026-09 (à valider)",
+      "miseAJour": "2026-09-27",
+      "applicableDepuis": null,
+      "source": null,
+      "avertissement": "Référentiel de départ, non validé. Chaque tarif et chaque condition doivent être vérifiés par le médecin (sources : ameli.fr, NGAP et CCAM en vigueur) avant usage. Métropole, secteur 1.",
+      "actes": [
+        {
+          "code": "G",
+          "libelle": "Consultation de médecine générale",
+          "type": "base",
+          "tarif": 30.0,
+          "conditions": {
+            "lieux": [
+              "cabinet"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [],
+          "groupe": null,
+          "note": "Consultation au cabinet du médecin généraliste.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "VG",
+          "libelle": "Visite à domicile de médecine générale",
+          "type": "base",
+          "tarif": 30.0,
+          "conditions": {
+            "lieux": [
+              "domicile"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [],
+          "groupe": null,
+          "note": "Visite ; la majoration de déplacement s'ajoute si la visite est justifiée.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "TCG",
+          "libelle": "Téléconsultation de médecine générale",
+          "type": "base",
+          "tarif": null,
+          "conditions": {
+            "lieux": [
+              "teleconsultation"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [],
+          "groupe": null,
+          "note": "Tarif à renseigner.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MD",
+          "libelle": "Majoration de déplacement (visite justifiée)",
+          "type": "majoration",
+          "tarif": 10.0,
+          "conditions": {
+            "lieux": [
+              "domicile"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [],
+          "groupe": null,
+          "note": "Uniquement si la visite est médicalement justifiée.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MEG",
+          "libelle": "Majoration enfant (0 à 6 ans)",
+          "type": "majoration",
+          "tarif": 5.0,
+          "conditions": {
+            "lieux": [
+              "cabinet",
+              "domicile"
+            ],
+            "ageMinMois": null,
+            "ageMaxMois": 71,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [],
+          "groupe": null,
+          "note": null,
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "F",
+          "libelle": "Majoration dimanche et jour férié (urgence)",
+          "type": "majoration",
+          "tarif": 19.06,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": true,
+            "plagesHoraires": null,
+            "urgence": true,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [],
+          "groupe": "horaire",
+          "note": "Acte non programmé, justifié par l'état du patient.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MN",
+          "libelle": "Majoration de nuit 20 h – minuit et 6 h – 8 h (urgence)",
+          "type": "majoration",
+          "tarif": 35.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": [
+              "20:00-24:00",
+              "06:00-08:00"
+            ],
+            "urgence": true,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [],
+          "groupe": "horaire",
+          "note": "Acte non programmé, justifié par l'état du patient.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "MM",
+          "libelle": "Majoration de nuit profonde minuit – 6 h (urgence)",
+          "type": "majoration",
+          "tarif": 40.0,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": [
+              "00:00-06:00"
+            ],
+            "urgence": true,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [],
+          "groupe": "horaire",
+          "note": "Acte non programmé, justifié par l'état du patient.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "DEQP003",
+          "libelle": "Électrocardiographie sur au moins 12 dérivations",
+          "type": "technique",
+          "tarif": 14.26,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "ecg",
+            "electrocardiogramme"
+          ],
+          "groupe": null,
+          "note": "Vérifier les règles de cumul avec la consultation.",
+          "aVerifier": true,
+          "local": false
+        },
+        {
+          "code": "JKHD001",
+          "libelle": "Prélèvement cervicovaginal (frottis)",
+          "type": "technique",
+          "tarif": null,
+          "conditions": {
+            "lieux": null,
+            "ageMinMois": null,
+            "ageMaxMois": null,
+            "dimancheFerie": null,
+            "plagesHoraires": null,
+            "urgence": null,
+            "medecinTraitant": null,
+            "ald": null
+          },
+          "motsCles": [
+            "frottis",
+            "prelevement cervico"
+          ],
+          "groupe": null,
+          "note": "Code et tarif à vérifier.",
+          "aVerifier": true,
+          "local": false
+        }
+      ],
+      "alertes": [
+        {
+          "motsCles": [
+            "certificat de sport",
+            "certificat sportif",
+            "non contre-indication"
+          ],
+          "message": "Certificat de non contre-indication au sport : en principe non remboursable par l'Assurance Maladie. À vérifier."
+        }
+      ]
+    }
+  ]
+}
